@@ -1,35 +1,51 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
+
 class TaskModel {
-  final int? id;
   final String title;
-  final String description;
   final String date;
+  final String startTime;
+  final String finishTime;
+  final String description;
   final String image;
-  final String status;
+  final String file;
 
   TaskModel({
-    this.id,
     required this.title,
-    required this.description,
     required this.date,
+    required this.startTime,
+    required this.finishTime,
+    required this.description,
     required this.image,
-    required this.status,
+    required this.file,
   });
 
-  factory TaskModel.fromJson(Map<String, dynamic> json) => TaskModel(
-        id: json['id'],
-        title: json['title'],
-        description: json['description'],
-        date: json['date'],
-        image: json['image'],
-        status: json['status'],
-      );
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'title': title,
+      'date': date,
+      'startTime': startTime,
+      'finishTime': finishTime,
+      'description': description,
+      'image': image,
+      'file': file,
+    };
+  }
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'title': title,
-        'description': description,
-        'date': date, 
-        'image': image,
-        'status': status,
-      };
+  factory TaskModel.fromMap(Map<String, dynamic> map) {
+    return TaskModel(
+      title: map['title'] as String,
+      date: map['date'] as String,
+      startTime: map['startTime'] as String,
+      finishTime: map['finishTime'] as String,
+      description: map['description'] as String,
+      image: map['image'] as String,
+      file: map['file'] as String,
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory TaskModel.fromJson(String source) =>
+      TaskModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

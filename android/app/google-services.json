@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "339146236859",
+    "project_id": "lapkinmobile",
+    "storage_bucket": "lapkinmobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339146236859:android:6f1cda8846823a4b8e5a9e",
+        "android_client_info": {
+          "package_name": "com.example.lapkin_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339146236859-m0qthcpg1fmsr3e49k8gergp0dmo9kck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMSvwJJFeNcqIlFG5mItDXWhrofTbVGdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339146236859-m0qthcpg1fmsr3e49k8gergp0dmo9kck.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
